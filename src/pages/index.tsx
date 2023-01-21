@@ -1,16 +1,20 @@
 import * as React from "react"
-import type {HeadFC, PageProps} from "gatsby"
-import {Button, Container, Text} from "@chakra-ui/react";
+import type {HeadProps} from "gatsby"
+import Layout from "../components/layout/Layout";
+import PageHeader from "../components/Header/PageHeader";
 
-const IndexPage: React.FC<PageProps> = () => {
+const IndexPage = () => {
   return (
-    <Container>
-      <Text fontSize="large" fontWeight="medium">Personal Page</Text>
-      <Button colorScheme="brand">Go To Another Page</Button>
-    </Container>
+    <Layout>
+      <PageHeader />
+    </Layout>
   )
 }
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export function Head(props: HeadProps) {
+  return (
+    <title>Hello World</title>
+  );
+}
