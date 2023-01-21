@@ -1,15 +1,19 @@
 import * as React from "react";
-import {Container} from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
+import NavBar from "../Navigation/NavBar";
+import Footer from "../Footer/Footer";
 
 type Props = {
   children?: React.ReactNode
 };
 
-const Layout = ({children}: Props) => {
+const Layout = ({ children }: Props) => {
   return(
-    <Container>
+    <Flex direction="column" flex="1">
+      <NavBar />
       {children}
-    </Container>
+      <Footer />
+    </Flex>
   );
 }
 

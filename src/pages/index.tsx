@@ -1,13 +1,12 @@
 import * as React from "react"
-import type { HeadProps } from "gatsby"
-import {Button, Text} from "@chakra-ui/react";
+import type {HeadProps} from "gatsby"
 import Layout from "../components/layout/Layout";
+import PageHeader from "../components/Header/PageHeader";
 
 const IndexPage = () => {
   return (
     <Layout>
-      <Text fontSize="6xl" fontWeight="medium">Personal Page</Text>
-      <Button colorScheme="brand">Go To Another Page</Button>
+      <PageHeader />
     </Layout>
   )
 }
